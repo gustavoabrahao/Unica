@@ -1,0 +1,203 @@
+body {
+    margin: 0; /* Remove a margem padrão do navegador */
+    font-family: Arial, sans-serif; /* Define a fonte do texto */
+}
+
+header {
+    background: rgba(224, 224, 226, 0.2); /* Define um fundo semi-transparente */
+    backdrop-filter: blur(20px); /* Aplica um efeito de desfoque no fundo */
+    margin: 10px; /* Adiciona margem ao redor do header */
+    margin-left: 40px; /* Define margem à esquerda */
+    margin-right: 40px; /* Define margem à direita */
+    padding: 15px 0; /* Adiciona espaçamento interno (15px em cima e embaixo, 0 nas laterais) */
+    border-radius: 50px; /* Arredonda as bordas do cabeçalho */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao header */
+    z-index: 2; /* Garante que o header fique acima de outros elementos */
+}
+
+.container {
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between; /* Distribui os itens igualmente */
+    max-width: 1200px; /* Define uma largura máxima para o container */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Adiciona espaçamento interno nas laterais */
+}
+
+.logo {
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha os itens verticalmente */
+    font-size: 20px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: black; /* Define a cor do texto como preto */
+}
+
+.logo i {
+    margin-right: 8px; /* Adiciona espaço à direita do ícone */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: flex; /* Ativa o Flexbox */
+    gap: 20px; /* Define o espaçamento entre os itens */
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+}
+
+nav ul li {
+    display: inline; /* Faz com que os itens fiquem na mesma linha */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #000000; /* Define a cor do texto como preto */
+    font-weight: 500; /* Define a espessura da fonte */
+}
+
+nav ul li a:hover {
+    color: #F48434; /* Muda a cor ao passar o mouse */
+    text-decoration: none; /* Mantém o link sem sublinhado */
+    transition: 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.social-icons a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000000; /* Define a cor preta */
+    margin-left: 15px; /* Adiciona um espaçamento à esquerda */
+}
+
+.social-icons:hover {
+    text-decoration: none; /* Mantém sem sublinhado */
+    color: #F48434; /* Altera a cor ao passar o mouse */
+    transition: 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.logoheader {
+    max-width: 200px; /* Define o tamanho máximo do logo */
+}
+
+.videoheader {
+    position: relative; /* Fixa o vídeo no topo da tela */
+    top: 0; /* Alinha o vídeo ao topo */
+    left: 0; /* Alinha o vídeo à esquerda */
+    width: 100%; /* Faz com que o vídeo ocupe toda a largura */
+    height: 30%; /* Define a altura do vídeo como 50% da tela */
+    object-fit: cover; /* Garante que o vídeo cubra toda a área disponível */
+    z-index: -1; /* Coloca o vídeo atrás dos outros elementos */
+    transform: translateY(-75px);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-image: url("./img/fundofoot.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    padding: 10px;
+    vertical-align: center;
+    max-width: 98.85%;
+}
+
+.logounicafooter{
+    display: flex;
+    align-items: left;
+    height: 50px;
+}
+
+.pfooter {
+    font-size: small;
+    color: white;
+}
+
+.logosfooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.premiumre {
+    color: white;
+    font-weight: bold;
+}
+
+.rightfoot1 {
+    color: white;
+    display: flex;
+    flex-direction:column;
+    gap: 5px;
+    margin-right: 180px;
+}
+
+.reseller {
+    font-weight: bold;
+}
+
+.hello {
+    margin-left: 70px;
+}
+
+.features {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 360px;
+    gap: 20px;
+    padding: 50px;
+    transform: translateY(-75px);
+
+}
+
+
+.foto1 {
+    border-radius: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.foto2 {
+    border-radius: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+
+.foto3 {
+    border-radius: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+
+.foto1:hover {
+    transform: scale(0.92);
+    transition: transform 0.1s ease;
+    filter: brightness(0.8)
+}
+
+.foto2:hover {
+    transform: scale(0.92);
+    transition: transform 0.1s ease;
+    filter: brightness(0.8)
+}
+
+.foto3:hover {
+    transform: scale(0.92);
+    transition: transform 0.1s ease;
+    filter: brightness(0.8)
+}
+
+.servç {
+    position: relative;
+    display: flex;
+    align-items: left;
+    color: #F48434;
+}
+
+.titulosfeatures {
+    text-align: left;
+    list-style-type: none;
+    color: #000000;
+}
