@@ -303,9 +303,9 @@ h2 {
   
   .image-column img {
     width: 100%;
-    height: auto;
     border-radius: 8px;
   }
+  
   .whatsapp-btn {
     display: inline-flex;
     align-items: center;
