@@ -41,6 +41,10 @@ header {
     /* Adiciona espaçamento interno nas laterais */
 }
 
+.logo-mobile {
+    display: none;
+}
+
 .logo {
     display: flex;
     /* Ativa o Flexbox */
@@ -584,22 +588,112 @@ h2 {
         object-fit: cover;
         margin-bottom: 20px;
     }
+
+    .projects h2 {
+        font-size: 1.5em;
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .text-column h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .text-column p {
+        text-align: center;
+    }
+
+    .servç  {
+        font-size: 1.5em;
+        justify-content: center;
+        text-align: center;
+        padding: 0px;
+}
+
+    .titulosfeatures {
+        padding: 0px;
+        margin-left: 20px;
+    }
+
+
+    .section-wrapper {
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 576px) {
     .logo img {
+        padding: 0px;
         max-height: 50px;
     }
 
     .features img {
+        padding: 0px;
         width: 100%;
     }
 
     .rightfoot1 {
+        padding: 0px;
         margin-right: 20px;
     }
 
     .hello {
+        padding: 0px;
         margin-left: 20px;
     }
+
+    .logosfooter {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .rightfoot1 {
+        padding: 0px;
+    }
+
+    .image-comparison {
+        margin-left: 17px;
+    }
+
+    .videoheader {
+        display: none;
+    }
+
+    header {
+        background: rgba(0, 0, 0, 0.2);
+        /* Define um fundo semi-transparente */
+        backdrop-filter: blur(20px);
+        /* Aplica um efeito de desfoque no fundo */
+        margin: 10px;
+        /* Adiciona margem ao redor do header */
+        margin-left: 40px;
+        /* Define margem à esquerda */
+        margin-right: 40px;
+        /* Define margem à direita */
+        padding: 15px 0;
+        /* Adiciona espaçamento interno (15px em cima e embaixo, 0 nas laterais) */
+        border-radius: 50px;
+        /* Arredonda as bordas do cabeçalho */
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+        /* Adiciona sombra ao header */
+        z-index: 2;
+}
+
+    header {
+        display: none;
+    }
+
+    .logo-mobile {
+        padding-left: 60px;
+        padding-top: 50px;
+        margin-bottom: 50px;
+        max-width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
 }

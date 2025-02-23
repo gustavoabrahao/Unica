@@ -2,7 +2,6 @@ const slider = document.querySelector(".image-comparison .slider");
 const beforeImage = document.querySelector(".image-comparison .before-image");
 const sliderLine = document.querySelector(".image-comparison .slider-line");
 const sliderIcon = document.querySelector(".image-comparison .slider-icon");
-let slickInitialized = false; // Variável para controlar a inicialização do Slick
 
 slider.addEventListener("input", (e) => {
     let sliderValue = e.target.value + "%";
@@ -60,29 +59,39 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
+    // Função para inicializar/atualizar o Slick Carousel
+    function updateSlickCarousel(images) {
+        // Remove a inicialização anterior
+        if (carousel.classList.contains('slick-initialized')) {
+            $(carousel).slick('unslick');
+        }
+
+        // Limpa o conteúdo do carrossel
+        carousel.innerHTML = '';
+
+        // Adiciona as novas imagens ao carrossel
+        images.forEach(image => {
+            const slide = document.createElement('div');
+            slide.innerHTML = `<img src="${image}" alt="Projeto">`;
+            carousel.appendChild(slide);
+        });
+
+        // Inicializa o Slick Carousel
+        $(carousel).slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    }
+
     projectItems.forEach(item => {
         item.addEventListener('click', () => {
             const projectNumber = item.dataset.project;
             const project = projectsData[projectNumber];
 
-            // Limpar o carrossel antes de adicionar novas imagens
-            carousel.innerHTML = '';
-
-            project.images.forEach(image => {
-                const slide = document.createElement('div');
-                slide.innerHTML = `<img src="${image}" alt="${project.title}">`;
-                carousel.appendChild(slide);
-            });
-
-            // Inicializar o Slick Carousel
-            $(carousel).slick('unslick');  // Remove a inicialização anterior
-            $(carousel).slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                adaptiveHeight: true
-            });
+            updateSlickCarousel(project.images);
 
             projectTitle.textContent = project.title;
             projectDescription.textContent = project.description;
@@ -98,16 +107,5 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target == projectPopup) {
             projectPopup.style.display = 'none';
         }
-    });
-
-    // Inicialize o Slick Carousel apenas uma vez no carregamento da página
-    $(document).ready(function () {
-        $('.carousel').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            adaptiveHeight: true
-        });
     });
 });
