@@ -19,12 +19,12 @@
                     <li><a href="#">Sobre Nós</a></li>
                     <li><a href="#">Serviços</a></li>
                     <li><a href="#">Nossa História</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="https://wa.me/5551999999999">Contato</a></li>
                 </ul>
             </nav>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/5551999999999"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </header>
@@ -53,7 +53,7 @@
     
     <section class="section-wrapper">
         <div class="text-column">
-          <h2>NOSSOS <br> SERVIÇOS</h2>
+          <h2>NOSSOS<br>SERVIÇOS</h2>
           <p>Na Única, prezamos por extrema qualidade em todos os nossos serviços. Nossa dedicação à excelência se reflete em cada projeto que realizamos, garantindo que seus imóveis recebam o melhor cuidado possível.</p>
             <a href="https://wa.me/5551999999999" class="whatsapp-btn" target="_blank">
             <i class="fab fa-whatsapp"></i> Fale Conosco
@@ -78,23 +78,73 @@
         </div>
       </section>
 
-            <footer>
-                <ul class="hello">
-                    <img src="./img/UNICA_-NOVO-8.png" alt="Logo Unica" height="60px">
-                </ul>
-                    <ul class="logosfooter">
-                        <p class="premiumre">PREMIUM RESELLER</p>
-                        <img src="./img/logosherwin.png" alt="Logo Sherwin" height="75px">
-                        <img src="./img/Logo-site-iv-1024x288.png" alt="Logo Votorantim" height="75px">
-                        <p class="pfooter">&copy; 2025 UNICA - Todos os direitos reservados.</p>
-                    </ul>
-                    <ul class="rightfoot1">
-                        <p class="reseller">PREMIUM RESELLER</p>
-                        <p>Seg-Sex 08:00-18:00</p>
-                        <p>Sab 08:00 - 12:00</p>
-                        <p>Dom: Fechado</p>
-                    </ul>
-                        </footer>
-                        <script src="main.js"></script>
+      <section class="projects">
+        <h2>Nossos Projetos</h2>
+        <div class="projects-grid">
+            <div class="project-item" data-project="1">
+                <img src="img/Stock-Condo-Exterior-Adobe-51342322-2.png" alt="Projeto 1">
+            </div>
+            <div class="project-item" data-project="2">
+                <img src="img/Stock-Condo-Exterior-Adobe-51342322-2.png" alt="Projeto 2">
+            </div>
+            <div class="project-item" data-project="3">
+                <img src="img/Stock-Condo-Exterior-Adobe-51342322-2.png" alt="Projeto 3">
+            </div>
+            <div class="project-item" data-project="4">
+                <img src="img/Stock-Condo-Exterior-Adobe-51342322-2.png" alt="Projeto 4">
+            </div>
+        </div>
+    </section>
+
+ <!-- Popup (inicialmente escondido) -->
+ <div id="project-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">×</span>
+        <div class="carousel">
+            <!-- Conteúdo do carrossel será preenchido via JS -->
+        </div>
+        <div class="project-details">
+            <h3 id="project-title"></h3>
+            <p id="project-description"></p>
+            <a id="whatsapp-link" href="https://wa.me/SEU_NUMERO_WHATSAPP" target="_blank" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Fale Conosco
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <ul class="hello">
+        <img src="./img/UNICA_-NOVO-8.png" alt="Logo Unica" height="60px">
+    </ul>
+    <ul class="logosfooter">
+        <p class="premiumre">PREMIUM RESELLER</p>
+        <img src="./img/logosherwin.png" alt="Logo Sherwin" height="75px">
+        <img src="./img/Logo-site-iv-1024x288.png" alt="Logo Votorantim" height="75px">
+        <p class="pfooter">© 2025 UNICA - Todos os direitos reservados.</p>
+    </ul>
+    <ul class="rightfoot1">
+        <p class="reseller">PREMIUM RESELLER</p>
+        <p>Seg-Sex 08:00-18:00</p>
+        <p>Sab 08:00 - 12:00</p>
+        <p>Dom: Fechado</p>
+    </ul>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    });
+</script>
 </body>
+
 </html>
