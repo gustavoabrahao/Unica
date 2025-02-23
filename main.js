@@ -2,6 +2,7 @@ const slider = document.querySelector(".image-comparison .slider");
 const beforeImage = document.querySelector(".image-comparison .before-image");
 const sliderLine = document.querySelector(".image-comparison .slider-line");
 const sliderIcon = document.querySelector(".image-comparison .slider-icon");
+let slickInitialized = false; // Variável para controlar a inicialização do Slick
 
 slider.addEventListener("input", (e) => {
     let sliderValue = e.target.value + "%";
@@ -25,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
             title: 'Projeto Residencial Moderno',
             description: 'Um projeto inovador com foco em sustentabilidade e design moderno. Destaque para o uso de materiais ecologicamente corretos e soluções de iluminação natural.',
             images: [
-                'https://via.placeholder.com/800x600/444',
-                'https://via.placeholder.com/800x600/333',
-                'https://via.placeholder.com/800x600/222'
+                'img/image.png',
+                'img/image.png',
+                'img/image.png'
             ]
         },
         2: {
@@ -97,5 +98,16 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target == projectPopup) {
             projectPopup.style.display = 'none';
         }
+    });
+
+    // Inicialize o Slick Carousel apenas uma vez no carregamento da página
+    $(document).ready(function () {
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
     });
 });
