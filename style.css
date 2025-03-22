@@ -286,6 +286,8 @@ footer {
 .image-comparison .images-conteiner {
   position: relative;
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .image-comparison .images-conteiner .before-image {
@@ -331,7 +333,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  margin-top: 80px;
   margin-bottom: 60px;
 }
 
@@ -733,6 +734,7 @@ footer {
   .section-wrapper2 {
     flex-direction: column;
     text-align: center;
+    margin: 0 20px 0 20px;
   }
 
   .popup-content {
@@ -816,13 +818,13 @@ footer {
   }
 
   .logo-mobile {
-    padding-left: 60px;
-    padding-top: 50px;
+    display: block;
+    margin: 0 30px;
+    max-width: 70px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
-    max-width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 60px;
   }
 
   .projects-grid {
@@ -1068,6 +1070,8 @@ footer {
     width: 100%;
     padding: 0 20px;
     margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .text-column p {
@@ -1151,6 +1155,8 @@ footer {
 
   .text-column p {
     font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .servç {
@@ -1238,9 +1244,9 @@ footer {
 
   .logo-mobile {
     display: block;
-    max-width: 120px;
+    max-width: calc(100% - 120px);
+    margin-bottom: 60px;
   }
-
   .projects-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
@@ -1448,6 +1454,7 @@ body {
 }
 
 .pagination-dot {
+  display: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -1677,5 +1684,42 @@ body {
 
   .back-to-top i {
     font-size: 16px;
+  }
+}
+
+/* Image Comparison Slider Mobile Responsiveness */
+@media (max-width: 576px) {
+  .image-comparison {
+    width: 90%;
+    margin: 20px auto;
+    max-width: none;
+  }
+
+  .image-comparison .slider-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-comparison {
+    width: 85%;
+    margin: 15px auto;
+  }
+
+  .image-comparison .images-conteiner {
+  }
+
+  .image-comparison img {
+    max-height: 350px;
+  }
+
+  .image-comparison .slider-line {
+    width: 3px;
+  }
+
+  .image-comparison .slider-icon {
+    width: 30px;
+    height: 30px;
   }
 }
