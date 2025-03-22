@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Reforma Estrutural",
       description:
         "Transforme e fortaleça a estrutura do seu imóvel com nossas soluções de reforma estrutural. Seja para revitalizar um prédio antigo ou reforçar a infraestrutura existente, nossa equipe está equipada para lidar com projetos de qualquer tamanho e complexidade. Utilizamos técnicas avançadas e materiais de alta qualidade para garantir segurança e durabilidade em cada obra.",
-      images: ["img/image.png", "img/Unica-2.png", "img/Unica-3.png"],
+      images: ["img/estrut1.jpeg", "img/estrut2.jpeg", "img/estrut3.jpeg"],
     },
 
     2: {
