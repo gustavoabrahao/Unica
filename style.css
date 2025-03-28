@@ -1101,9 +1101,19 @@ footer {
   }
 
   header {
-    margin: 5px;
+    display: none;
   }
 
+  .logo-mobile {
+    display: block;
+    margin: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    width: 300px;
+  }
+  
   .logo img {
     margin-bottom: 15px;
   }
@@ -1188,6 +1198,10 @@ footer {
     font-size: 24px;
     margin-bottom: 30px;
   }
+
+  .videoheader {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1224,7 +1238,7 @@ footer {
   }
 
   .videoheader {
-    height: 50vh;
+   display: none;
   }
 
   header {
